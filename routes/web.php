@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+// Route::get('/project/list', [ProjectController::class, 'index'])->name('project.index');
+// Route::get('/project/new', [ProjectController::class, 'form'])->name('project.create');
+// Route::post('/project/update', [ProjectController::class, 'update'])->name('project.update');
+
+Route::resource('project', ProjectController::class);
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

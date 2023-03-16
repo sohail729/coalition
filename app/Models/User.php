@@ -41,4 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getInitialsAttribute()
+    {
+        $name = $this->name;
+        $words = explode(" ", $name);
+        $initials = '';
+        foreach ($words as $word) {
+            $initials .= $word[0];
+        }
+        return strtoupper($initials);
+    }
 }

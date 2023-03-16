@@ -35,3 +35,4 @@
         <!-- main @e -->
     </div>
     @include('partials.scripts')
+</body></html>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,8 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::resource('project', ProjectController::class);
+    Route::get('task/change-priority', [TaskController::class, 'changePriority'])->name('task.change-priority');
+    Route::resource('task', TaskController::class);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 });

@@ -45,10 +45,10 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="" class="nk-menu-link"><span class="nk-menu-text">New</span></a>
+                                <a href="{{ route('task.create') }}" class="nk-menu-link"><span class="nk-menu-text">New</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="{{ route('project.index') }}" class="nk-menu-link"><span class="nk-menu-text">List</span></a>
+                                <a href="{{ route('task.index') }}" class="nk-menu-link"><span class="nk-menu-text">List</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->

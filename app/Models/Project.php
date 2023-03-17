@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
+
+    public function owner()
+    {
+        return $this->belongsTo('App\Models\User', 'created_by');
+    }
+
+    public function tasks()
+    {
+        return $this->hasMany('App\Models\Task');
+    }
+
 }

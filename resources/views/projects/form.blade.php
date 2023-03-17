@@ -35,7 +35,7 @@
                         <div class="form-group">
                             {!! Form::label('description', 'Description', ['class' => 'form-label']); !!}
                             <div class="form-control-wrap">
-                                {!! Form::textarea('description', '', ['class' => 'form-control', 'required' => 'required']); !!}
+                                {!! Form::textarea('description', '', ['class' => 'form-control', 'required' => 'required', 'rows' => '3']); !!}
                             </div>
                         </div>
                     </div>

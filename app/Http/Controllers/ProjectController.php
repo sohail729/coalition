@@ -41,7 +41,7 @@ class ProjectController extends Controller
         $project->title = $request->title;
         $project->description = $request->description;
         $project->status = $request->status;
-        $project->created_by = auth()->id() ?? 1;
+        $project->created_by = auth()->id();
         $project->save();
         return redirect()->route('project.index')->with('alert-success', 'Record has been stored successfully.');
 

@@ -1,7 +1,7 @@
 # Setup Guide
 
 1. Create local database with name `test`.
-2. Clone project `git clone https://github.com/sohail729/coalition-test.git`.
+2. Clone project `git clone https://github.com/sohail729/coalition.git`.
 3. Rename `.env.example` to `.env`.
 4. Set `DB_DATABASE` to `test` and `DB_USERNAME` & `DB_PASSWORD` to local phpmyadmin credentials in `.env` file.
 5. Run `composer install` in terminal inside the folder.
